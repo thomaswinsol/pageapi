@@ -27,6 +27,8 @@ class Application_Model_Page extends My_Model
 
         return $this->insert($dbFields);        
     }
+    
+    
         
 }
 

@@ -39,10 +39,10 @@ class Api_PageController extends Zend_Rest_Controller
         $titel= $this->_getParam('titel');
         $omschrijving= $this->_getParam('omschrijving');
         
-        try {
-            $modelPages= new Application_Model_Page();
-            $dbFields= array("Titel"=>$titel, "Omschrijving"=>$omschrijving);
-            $modelPages->save($dbFields);   
+            try {
+                $modelPages= new Application_Model_Page();
+                $dbFields= array("Titel"=>$titel, "Omschrijving"=>$omschrijving);
+                $modelPages->save($dbFields);   
             
             } catch (Exception $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";  
@@ -56,15 +56,15 @@ class Api_PageController extends Zend_Rest_Controller
     public function putAction()
     {
         //$this->getResponse()
-               // ->appendBody('putAction() return');
+        // ->appendBody('putAction() return');
         $titel= $this->_getParam('titel');
         $omschrijving= $this->_getParam('omschrijving');
         $id= $this->_getParam('id');
         
         try {
-            $modelPages= new Application_Model_Page();
-            $dbFields= array("Titel"=>$titel, "Omschrijving"=>$omschrijving);
-            $modelPages->save($dbFields,$id);   
+                $modelPages= new Application_Model_Page();
+                $dbFields= array("Titel"=>$titel, "Omschrijving"=>$omschrijving);
+                $modelPages->save($dbFields,$id);   
             
             } catch (Exception $e) {
             //echo 'Caught exception: ',  $e->getMessage(), "\n";  
