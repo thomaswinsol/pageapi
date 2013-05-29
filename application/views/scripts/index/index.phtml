@@ -1,5 +1,13 @@
 <?php
-        foreach ($this->pages as $p) {
-            echo $p['Titel']." ". $p['Omschrijving']. '<br/>';
-        }
-?>
+$pagina = '';
+foreach($this->pages as $page) { ?>
+    <?php $pagina = $this->id==$page['ID']?$page['Omschrijving']:$pagina; ?>
+    <p>
+        <a href='/index/index/id/<?php echo $page['ID']; ?>'><?php echo $page['Titel']; ?></a>
+    </p>
+<?php
+}
+echo '<br/>';
+if (!empty($pagina)){
+    echo "Pagina: ".$pagina;
+}

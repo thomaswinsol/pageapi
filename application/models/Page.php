@@ -9,7 +9,7 @@ class Application_Model_Page extends My_Model
     public function save($data,$id = NULL)
     {
     	//ini
-    	$currentTime =  date("Y-m-d H:i:s", time());
+    	//$currentTime =  date("Y-m-d H:i:s", time());
 
         $isUpdate = FALSE;
         $dbFields = array(     	

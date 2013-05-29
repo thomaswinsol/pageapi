@@ -1,4 +1,10 @@
-<br /><br />
-<div id="view-content">
-	<p>View script for controller <b>Page</b> and script/action name <b>index</b></p>
-</div>
+<?php
+$omschrijving = '';
+foreach($this->pages as $page) { ?>
+    <a href="/index/page/id/<?= $page['id'];?>"><?=$page['titel'].'<br>';?></a>
+<?php
+    if($this->id == $page['id']) {
+        $omschrijving = $page['omschrijving'];
+    }
+}
+echo '<br><hr>'.$omschrijving;
